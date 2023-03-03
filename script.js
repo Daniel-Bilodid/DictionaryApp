@@ -43,13 +43,13 @@ colorChange.addEventListener('change', function() {
         .then((data) => this.displayInfo(data));
     },
     displayInfo: function (data) {
-      console.log(data[0].phonetics[0])
+      console.log(data[0].meanings)
       let ul = document.querySelector('.list');
       let verb__list = document.querySelector('.verb__list')
       document.querySelector(".dictionary__info-h1").innerText = data[0].word;
 
 
-      document.querySelector(".dictionary__info-trs").innerText = data[0].phonetics[0].text ? data[0].phonetics[0].text : data[0].phonetics[1].text;  // need to fix //
+      document.querySelector(".dictionary__info-trs").innerText = data[0].phonetics[0].text ? data[0].phonetics[0].text : data[0].phonetics[1].text;  
 
      
 
@@ -57,20 +57,25 @@ colorChange.addEventListener('change', function() {
       document.querySelector('.source__link').innerText = data[0].sourceUrls[0];
 
 
-      // if(data[0].meanings[2].definitions[0].example) {
-      //   document.querySelector('.verb__meaning').innerText = data[0].meanings[2].definitions[0].example;
-      // } else {
-      //   document.querySelector('.verb__meaning').innerText = 'There is no examples'
-      // }   // need to fix //
+   
+  
+   
 
 
-     
+     let newArr = data[0].meanings[0].definitions;
+
+     newArr.map((item) => {
+        if(item.example) {
+         
+          document.querySelector('.verb__meaning').innerText = item.example;
+        }
+     })
      
 
       let noneArr = data[0].meanings[0].partOfSpeech === 'noun' ? data[0].meanings[0].definitions : []; 
-      let verbArr = data[0].meanings[0].partOfSpeech === 'verb' ? data[0].meanings[0].definitions : data[0].meanings[1].definitions;
+      let verbArr = data[0].meanings[0].partOfSpeech === 'verb' ? data[0].meanings[0].definitions : data[0].meanings[1].definitions; // need fix
 
-
+     
     
 
 
@@ -137,4 +142,4 @@ colorChange.addEventListener('change', function() {
       }
     });
   
-  word.fetchWord("study");
+  word.fetchWord('help');
