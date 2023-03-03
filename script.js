@@ -43,7 +43,7 @@ colorChange.addEventListener('change', function() {
         .then((data) => this.displayInfo(data));
     },
     displayInfo: function (data) {
-      console.log(data[0].meanings)
+   
       let ul = document.querySelector('.list');
       let verb__list = document.querySelector('.verb__list')
       document.querySelector(".dictionary__info-h1").innerText = data[0].word;
@@ -73,10 +73,9 @@ colorChange.addEventListener('change', function() {
      
 
       let noneArr = data[0].meanings[0].partOfSpeech === 'noun' ? data[0].meanings[0].definitions : []; 
-      let verbArr = data[0].meanings[0].partOfSpeech === 'verb' ? data[0].meanings[0].definitions : data[0].meanings[1].definitions; // need fix
+      let verbArr = data[0].meanings[0].partOfSpeech === 'verb' ? data[0].meanings[0].definitions : data[0].meanings[0].definitions || ! data[0].meanings[0].definitions ? [] : []; 
 
-     
-    
+
 
 
       let listItem = document.querySelectorAll('.list__item');
