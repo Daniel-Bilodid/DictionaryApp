@@ -2,7 +2,8 @@ let colorChange = document.querySelector("input[type=checkbox]");
 let body = document.querySelector('body');
 let input = document.querySelector('.input-dictionary');
 let select = document.querySelector('.custom-select');
-
+let audio = document.querySelector('.audio')
+let playBtn = document.querySelector('.dictionary__info-audio')
 
 colorChange.addEventListener('change', function() {
     if (this.checked) {
@@ -43,7 +44,7 @@ colorChange.addEventListener('change', function() {
         .then((data) => this.displayInfo(data));
     },
     displayInfo: function (data) {
-   
+     console.log(data[0])
       let ul = document.querySelector('.list');
       let verb__list = document.querySelector('.verb__list')
       document.querySelector(".dictionary__info-h1").innerText = data[0].word;
@@ -57,8 +58,8 @@ colorChange.addEventListener('change', function() {
       document.querySelector('.source__link').innerText = data[0].sourceUrls[0];
 
 
-   
-  
+      
+      audio.setAttribute('src', data[0].phonetics[0].audio ? data[0].phonetics[0].audio : data[0].phonetics[1].audio)
    
 
 
@@ -73,10 +74,8 @@ colorChange.addEventListener('change', function() {
      
 
       let noneArr = data[0].meanings[0].partOfSpeech === 'noun' ? data[0].meanings[0].definitions : []; 
-      let verbArr = data[0].meanings[0].partOfSpeech === 'verb' ? data[0].meanings[0].definitions : data[0].meanings[0].definitions || ! data[0].meanings[0].definitions ? [] : []; 
-
-
-
+      let verbArr = data[0].meanings[0].partOfSpeech === 'verb' ? data[0].meanings[0].definitions : data[0].meanings[1].definitions;  // fix
+    
 
       let listItem = document.querySelectorAll('.list__item');
 
@@ -140,5 +139,20 @@ colorChange.addEventListener('change', function() {
       
       }
     });
+
+
+
+
+
+
+
+    // Audio
+    playBtn.addEventListener('click', () => {
+      play();
+    })
+
+    function play() {
+      audio.play();
+    }
   
-  word.fetchWord('help');
+  word.fetchWord('tiger');

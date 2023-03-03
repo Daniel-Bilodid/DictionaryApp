@@ -174,10 +174,13 @@ input[type=text] {
     display: flex;
     justify-content: space-between;
 }
-.dictionary__info-audio img{
+.dictionary__info-audio audio img{
     width: 75px;
     height: 75px;
     margin-top: 20px;
+}
+.dictionary__info-audio {
+    cursor: pointer;
 }
 
 .dictionary__info-h1 {
