@@ -23,10 +23,10 @@
 
 
               <select class="custom-select">
-                <option value="serif">Serif</option>
-                <option value="sans">Sans Serif</option>
+                <option value="serif" style="font-family: serif;">Serif</option>
+                <option value="sans" style="font-family: sans-serif; ">Sans Serif</option>
                 
-                <option value="mono">Mono</option>
+                <option value="mono" style="font-family: monospace;">Mono</option>
                
             </select> 
             </div>
@@ -43,88 +43,107 @@
         </div>
 
 
-        <div class="dictionary__input">
+        
+          <div class="dictionary__input">
   
-          <input class="input-dictionary" type="text">
-          <img class="dictionary__input-search" src="./assets/images/icon-search.svg" alt="search"> 
-        </div>
-
-
-        <div class="dictionary__info">
-          <div class="dictionary__info-title">
-            <div>
-              <div class="dictionary__info-h1">
-                keyboard
-              </div>
-              <div class="dictionary__info-trs">
-                /'ki:bc:d/
-              </div>
-            </div>
-            <div class="dictionary__info-audio">
-              <img src="./assets/images/icon-play.svg" alt="play">
-              <audio class="audio" src="https://api.dictionaryapi.dev/media/pronunciations/en/hello-au.mp3">
-                
-              </audio>
-            </div>
+            <input class="input-dictionary" type="text">
+           <div class="input-dictionary-error">
+            Whoops, can’t be empty…
+           </div>
+            <img class="dictionary__input-search" src="./assets/images/icon-search.svg" alt="search"> 
           </div>
 
-          <div class="dictionary__info-noun">
-            <div class="noun">
-              <span>noun</span> 
-              <div class="hr"></div>
+          <div class="dictionary__error-wrapper">
+            <div class="dictionary__error-img">
+                <img src="./assets/images/error.png" alt="error">
+            </div>
+            <div class="dictionary__error-title">
+              No Definitions Found
+            </div>
+            <div class="dictionary__error-subtitle">
+              Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.
+            </div>
+          </div>
+          <div class="dictionary__main-wrapper">
+  
+          <div class="dictionary__info">
+            <div class="dictionary__info-title">
+              <div>
+                <div class="dictionary__info-h1">
+                  keyboard
+                </div>
+                <div class="dictionary__info-trs">
+                  /'ki:bc:d/
+                </div>
+              </div>
+              <div class="dictionary__info-audio">
+                <img src="./assets/images/icon-play.svg" alt="play">
+                <audio class="audio" src="">
+                  
+                </audio>
+              </div>
             </div>
 
-            <div class="dictionary__noun-meaning">
-              <span>Meaning</span>
-
-              <div class="dictionary__noun-list">
-                <ul class="list">
-               
-                </ul>
+         
+  
+            <div class="dictionary__info-noun">
+              <div class="noun">
+                <span>noun</span> 
+                <div class="hr"></div>
               </div>
-
-              <div class="dictionary__noun-synonyms">
-                <div class="dictionary__noun-wrapper">
-                  <span>Synonyms</span>
-                  <div class="dictionary__noun-syn">
-                    electronic keyboard
+  
+              <div class="dictionary__noun-meaning">
+                <span>Meaning</span>
+  
+                <div class="dictionary__noun-list">
+                  <ul class="list">
+                 
+                  </ul>
+                </div>
+  
+                <div class="dictionary__noun-synonyms">
+                  <div class="dictionary__noun-wrapper">
+                    <span>Synonyms</span>
+                    <div class="dictionary__noun-syn">
+                      electronic keyboard
+                    </div>
                   </div>
                 </div>
               </div>
+  
+  
             </div>
-
-
-          </div>
-
-          <div class="dictionary__info-noun">
-            <div class="noun">
-              <span>verb</span> 
-              <div class="hr"></div>
-            </div>
-
-            <div class="dictionary__noun-meaning">
-              <span>Meaning</span>
-
-              <div class="dictionary__noun-list">
-                <ul class="list verb__list">
-                  <li class="list__item">To type on a computer keyboard.</li>
-              
-                </ul>
-                <div class="verb__meaning">“Keyboarding is the part of this job I hate the most.”</div>
+  
+            <div class="dictionary__info-noun">
+              <div class="noun">
+                <span>verb</span> 
+                <div class="hr"></div>
               </div>
-              
-              <div class="verb__hr">
-          </div>
-          <div class="source">
-            <div class="source__wrapper">
-              <span>Source</span> <a href="https://en.wiktionary.org/wiki/keyboard" class="source__link">https://en.wiktionary.org/wiki/keyboard</a>
-              <img src="./assets/images/icon-new-window.svg" alt="new window">
+  
+              <div class="dictionary__noun-meaning">
+                <span>Meaning</span>
+  
+                <div class="dictionary__noun-list">
+                  <ul class="list verb__list">
+                    <li class="list__item">To type on a computer keyboard.</li>
+                
+                  </ul>
+                  <div class="verb__meaning">There is no examples</div>
+                </div>
+                
+                <div class="verb__hr">
+            </div>
+            <div class="source">
+              <div class="source__wrapper">
+                <span>Source</span> <a href="" id="source__link">https://en.wiktionary.org/wiki/hello</a>
+                <img src="./assets/images/icon-new-window.svg" alt="new window">
+              </div>
             </div>
           </div>
+        
         </div>
-      
       </div>
-    </div>
+        </div>
 
     <script src="script.js"></script>
 </body>
