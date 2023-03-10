@@ -222,4 +222,4 @@ select.addEventListener('change' , () => {
       audio.play();
     }
   
-  word.fetchWord('hello');
+  word.fetchWord('keyboard');
