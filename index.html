@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="dictionary">
+    <main class="dictionary">
       <div class="dictionary__nav">
 
         
@@ -28,8 +28,8 @@
             <div class="dictionary__nav-group">
               <div class="dictionary__nav-fonts">
   
-  
-                <select class="custom-select">
+                <label for="select"></label>
+                <select class="custom-select" id="select">
                   <option value="serif" style="font-family: serif; margin-left: 20px;">Serif</option>
                   <option value="sans" style="font-family: sans-serif; ">Sans Serif</option>
                   
@@ -56,10 +56,10 @@
 
 
         
-       <main>
+     
         <div class="dictionary__input">
-          <label  for="input"></label>
-          <input class="input-dictionary" type="text">
+          <label for="input"></label>
+          <input class="input-dictionary" id="input" type="text">
         <div class="input-dictionary-error">
           Whoops, can’t be empty…
          </div>
