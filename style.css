@@ -250,6 +250,7 @@ input[type=text] {
     color: var(--main-color);
     font-weight: 700;
     font-size: 64px;
+    margin: 0;
 }
 
 .dictionary__info-trs {

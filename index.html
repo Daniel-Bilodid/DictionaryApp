@@ -14,49 +14,59 @@
       <div class="dictionary__nav">
 
         
-        <div class="dictionary__nav-wrapper">
-          <div class="dictionary__nav-logo">
-            <img src="./assets/images/logo.svg" alt="logo">
-          </div>
-          <div class="dictionary__nav-group">
-            <div class="dictionary__nav-fonts">
-
-
-              <select class="custom-select">
-                <option value="serif" style="font-family: serif; margin-left: 20px;">Serif</option>
-                <option value="sans" style="font-family: sans-serif; ">Sans Serif</option>
-                
-                <option value="mono" style="font-family: monospace;">Mono</option>
-               
-            </select> 
-
-          
-
-            </div>
     
-            <hr>
-            <div class="dictionary__nav-theme">
-              <input type="checkbox" id="switch" /><label class="dictionary__nav-label" for="switch">Toggle</label>
+        <header>
+            
+          <div class="dictionary__nav-wrapper">
+            <div class="dictionary__nav-logo">
+              <img src="./assets/images/logo.svg" alt="logo">
             </div>
-            <div class="dictionary__nav-moon">
-              <img src="./assets/images/icon-moon.svg" class="moon" alt="moon">
-              <img src="./assets/images/iconoir_half-moon.png" class="dark__moon" alt="dark__moon">
+        </header>
+
+            <nav>
+            <div class="dictionary__nav-group">
+              <div class="dictionary__nav-fonts">
+  
+  
+                <select class="custom-select">
+                  <option value="serif" style="font-family: serif; margin-left: 20px;">Serif</option>
+                  <option value="sans" style="font-family: sans-serif; ">Sans Serif</option>
+                  
+                  <option value="mono" style="font-family: monospace;">Mono</option>
+                 
+              </select> 
+  
+            
+  
+              </div>
+      
+              <hr>
+              <div class="dictionary__nav-theme">
+                <input type="checkbox" id="switch" /><label class="dictionary__nav-label" for="switch">Toggle</label>
+              </div>
+              <div class="dictionary__nav-moon">
+                <img src="./assets/images/icon-moon.svg" class="moon" alt="moon">
+                <img src="./assets/images/iconoir_half-moon.png" class="dark__moon" alt="dark__moon">
+              </div>
             </div>
           </div>
-        </div>
+         </nav>
+        
 
 
         
-          <div class="dictionary__input">
-            <label  for="input"></label>
-            <input class="input-dictionary" type="text">
-          <div class="input-dictionary-error">
-            Whoops, can’t be empty…
-           </div>
-           <a href="#">
-            <img class="dictionary__input-search" src="./assets/images/icon-search.svg" alt="search">
-           </a>
-          </div>
+       <main>
+        <div class="dictionary__input">
+          <label  for="input"></label>
+          <input class="input-dictionary" type="text">
+        <div class="input-dictionary-error">
+          Whoops, can’t be empty…
+         </div>
+         <a href="#">
+          <img class="dictionary__input-search" src="./assets/images/icon-search.svg" alt="search">
+         </a>
+        </div>
+       
 
           <div class="dictionary__error-wrapper">
             <div class="dictionary__error-img">
@@ -74,9 +84,9 @@
           <div class="dictionary__info">
             <div class="dictionary__info-title">
               <div>
-                <div class="dictionary__info-h1">
+                <h1 class="dictionary__info-h1">
                   keyboard
-                </div>
+                </h1>
                 <div class="dictionary__info-trs">
                   /'ki:bc:d/
                 </div>
@@ -149,7 +159,10 @@
         </div>
       </div>
         </div>
+      </main>
+      <footer>
         <div class="challenge__author"> Challenge by <a href="https://www.frontendmentor.io/home">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/Daniel-Bilodid">Daniel Bilodid</a>.</div>
+      </footer>
     <script src="script.js"></script>
     
 </body>
