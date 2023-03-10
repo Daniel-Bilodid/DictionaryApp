@@ -143,7 +143,7 @@ input[type=checkbox] {
     visibility: hidden;
   }
   
-  label {
+  .dictionary__nav-label {
     cursor: pointer;
     text-indent: -9999px;
     width: 40px;
@@ -154,7 +154,7 @@ input[type=checkbox] {
     position: relative;
   }
   
-  label:after {
+  .dictionary__nav-label:after {
     content: "";
     position: absolute;
     top: 3px;
@@ -166,16 +166,16 @@ input[type=checkbox] {
     transition: 0.3s;
   }
   
-  input:checked + label {
+  input:checked + .dictionary__nav-label {
     background: #A445ED;
   }
   
-  input:checked + label:after {
+  input:checked + .dictionary__nav-label:after {
     left: calc(100% - 5px);
     transform: translateX(-100%);
   }
   
-  label:active:after {
+  .dictionary__nav-label:active:after {
     width: 14px;
   }
 
