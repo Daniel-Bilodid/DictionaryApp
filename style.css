@@ -12,15 +12,21 @@ body {
   }
 
 
+.dark__moon{
+    display: none;
+}
 
 .custom-select {
+    width: 100px;
     background-color: white;
     border: none;
     font-family: serif;
     font-weight: 700;
     font-size: 18px; 
     color: #2D2D2D;   
+   
   }
+
 
   select {
     -webkit-appearance: none;
@@ -32,8 +38,10 @@ body {
     background-position-y: 5px;
     border: 1px solid #dfdfdf;
     border-radius: 2px;
-  
+    
   }
+
+
 
 
 
@@ -184,11 +192,14 @@ input[type=checkbox] {
     margin-top: 51.5px;
 }
 
+
+
 .dictionary__input-search {
-    position: absolute;
-    cursor: pointer;
-right: 610px;
-top: 175px;
+    position: relative;
+    float: right;
+  
+    top: -41px;
+    right: 16px;
 
 }
 
@@ -397,8 +408,8 @@ margin-right: 15px;
 
 @media only screen and (max-width: 600px) {
     .dictionary__input input {
-        width: 327px;
-        height: 48px;
+        width: 100%;
+      
        
     }
     .verb__hr {
@@ -421,8 +432,20 @@ margin-right: 15px;
     .list__item {
         font-size: 15px;
     }
-    .dictionary__input-search {
-        right: 56px;
-        top: 165px;
-    }
+  
+}
+
+.challenge__author {
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+/* or 133% */
+
+
+/* 2D2D2D */
+
+color: #2D2D2D;
+
 }

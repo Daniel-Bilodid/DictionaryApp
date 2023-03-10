@@ -20,7 +20,9 @@ colorChange.addEventListener('change', function() {
       select.style.color = '#FFFFFF';
       document.documentElement.style.setProperty('--main-color', 'white');
       document.querySelector('.dictionary__error-title').style.color = 'white'
-       
+      document.querySelector('.dark__moon').style.display = 'block'
+      document.querySelector('.moon').style.display = 'none'
+      document.querySelector('.challenge__author').style.color = 'white'
       
     } else {
         body.style.backgroundColor = 'white'
@@ -29,8 +31,10 @@ colorChange.addEventListener('change', function() {
         select.style.backgroundColor = 'white'
       select.style.color = '#2D2D2D'
       document.documentElement.style.setProperty('--main-color', '#2D2D2D');
-      
+      document.querySelector('.dark__moon').style.display = 'none'
+      document.querySelector('.moon').style.display = 'block'
       document.querySelector('.dictionary__error-title').style.color = '#2D2D2D'
+      document.querySelector('.challenge__author').style.color = '#2D2D2D'
     }
   });
 
@@ -109,19 +113,20 @@ select.addEventListener('change' , () => {
      audio.setAttribute('src', audioArr)
   
    
-     console.log(audioArr)
     let newArr = data[0].meanings[0].definitions;
 
         let newURL = data[0].sourceUrls[0];
         document.getElementById("source__link").href = newURL;
 
      newArr.map((item) => {
+   
         if(item.example) {
-         
+          
           document.querySelector('.verb__meaning').innerText = item.example;
-        } 
-     })
+        }
      
+     })
+    
 
       let noneArr = data[0].meanings[0].partOfSpeech === 'noun' ? data[0].meanings[0].definitions : []; 
 
