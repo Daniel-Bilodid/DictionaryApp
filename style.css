@@ -260,6 +260,14 @@ input[type=text] {
     color: #A445ED;
 }
 
+.dictionary__input label{
+    display: none;
+}
+
+.dictionary__nav-fonts label {
+    display: none;
+}
+
 .hr {
     border: 0px solid #E9E9E9;
     background: #E9E9E9;
@@ -437,7 +445,7 @@ margin-right: 15px;
 }
 
 .challenge__author {
-    margin-top: 100px;
+    margin-top: 130px;
     text-align: center;
     font-weight: 400;
 font-size: 18px;
@@ -450,3 +458,4 @@ line-height: 24px;
 color: #2D2D2D;
 
 }
+
